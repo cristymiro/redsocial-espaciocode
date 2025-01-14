@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+input {
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+button {
+    padding: 8px;
+}
+
+/* Estilos para la barra superior */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+.topbar .left-buttons,
+.topbar .right-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.topbar button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.topbar button:hover {
+    background-color: #777;
+}
+
+.topbar .home-icon {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: white;
+    text-decoration: none;
+}
+
+.topbar .home-icon i {
+    font-size: 18px;
+}
+
+/*CSS DEL HEADER*/
+
+/* Estilos para la pantalla de inicio */
+#content {
+    display: flex;
+    height: calc(100vh - 50px); /* Altura de la barra superior */
+    padding: 20px;
+}
+
+#content .left-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#content .left-image img {
+    max-width: 100%;
+    max-height: 80%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+#content .right-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 20px;
+    text-align: right;
+}
+
+#content .right-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#content .right-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+#content .right-content p {
+    font-size: 1rem;
+    color: #777;
+}
+
