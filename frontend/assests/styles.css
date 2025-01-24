@@ -19,7 +19,7 @@ button {
     padding: 8px;
 }
 
-/* Estilos para la barra superior */
+
 .topbar {
     display: flex;
     justify-content: space-between;
@@ -63,10 +63,10 @@ button {
 
 /*CSS DEL HEADER*/
 
-/* Estilos para la pantalla de inicio */
+
 #content {
     display: flex;
-    height: calc(100vh - 50px); /* Altura de la barra superior */
+    height: calc(100vh - 50px); 
     padding: 20px;
 }
 

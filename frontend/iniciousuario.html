@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio Usuario</title>
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f9;
+    }
+    .container {
+      text-align: center;
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+    p {
+      color: #555;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>¡Hola, <span id="user-name">Usuario</span>!</h1>
+    <p id="motivational-quote">Cargando frase motivacional...</p>
+    <button id="go-to-dashboard">Entra aquí para publicar y ver qué está pasando</button>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const storedUser = JSON.parse(localStorage.getItem("user"));
+      if (!storedUser) {
+        alert("Por favor, inicia sesión para acceder.");
+        window.location.href = "./login.html";
+        return;
+      }
+
+      const { user } = storedUser;
+      const userName = user?.name || "Usuario Anónimo";
+      document.getElementById('user-name').textContent = userName;
+
+     
+      const motivationalQuotes = [
+  "¡Nunca es tarde para empezar de nuevo!",
+  "El futuro pertenece a aquellos que creen en la belleza de sus sueños.",
+  "Hoy es un buen día para empezar algo nuevo.",
+  "El éxito es la suma de pequeños esfuerzos repetidos día tras día.",
+  "No cuentes los días, haz que los días cuenten.",
+  "Lo único imposible es aquello que no intentas.",
+  "Cada día es una nueva oportunidad para cambiar tu vida.",
+  "El único modo de hacer un gran trabajo es amar lo que haces.",
+  "Haz de tu vida un sueño, y de tu sueño una realidad.",
+  "Lo que no te mata te hace más fuerte.",
+  "El éxito no es la clave de la felicidad. La felicidad es la clave del éxito.",
+  "Sigue tus sueños, no la multitud.",
+  "No importa cuántas veces caigas, lo importante es cuántas veces te levantas.",
+  "Cree en ti mismo y todo será posible.",
+  "Haz hoy lo que otros no quieren, haz mañana lo que otros no pueden.",
+  "No hay límites para lo que puedes lograr.",
+  "Aprovecha el día y haz que cada momento cuente.",
+  "La única forma de hacer un gran trabajo es amar lo que haces.",
+  "Si puedes soñarlo, puedes hacerlo.",
+  "Cada paso que tomas es un paso más cerca de tus sueños.",
+  "Nunca te rindas, las grandes cosas toman tiempo.",
+];
+      
+      const randomQuote = motivationalQuotes[Math.floor(Math.random() * motivationalQuotes.length)];
+      document.getElementById('motivational-quote').textContent = randomQuote;
+
+      
+      document.getElementById('go-to-dashboard').addEventListener('click', () => {
+        window.location.href = "./dashboard.html";
+      });
+    });
+  </script>
+  
+</body>
+</html>

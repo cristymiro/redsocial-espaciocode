@@ -12,11 +12,12 @@
         <section id="user-info">
             <h1>Hola, <span id="user-name">Usuario</span>!</h1>
             <p>Sigues a: <span id="following-count">0</span> personas</p>
-            <p>Te siguen: <span id="followers-count">0</span> personas</p>
             <p>Publicaciones: <span id="posts-count">0</span></p>
+            <button id="back-to-inicio" onclick="window.location.href = './iniciousuario.html';">Volver a Inicio Usuario</button>
+</section>
         </section>
 
-       
+        
         <section id="share-post">
             <h2>Comparte algo con la comunidad</h2>
             <form id="share-form">
@@ -25,18 +26,20 @@
             </form>
         </section>
 
-       
+        
         <section id="posts">
             <h2>Publicaciones recientes</h2>
-            <div id="posts-list"></div>
+            <div id="posts-list"></div> 
         </section>
     </main>
 
    
     <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
-
-   
     <script src="dashboard.js"></script>
 </body>
 </html>
+
+
+
+
 

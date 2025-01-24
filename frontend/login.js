@@ -35,8 +35,10 @@ document.addEventListener('DOMContentLoaded', () => {
                   user: { name: data.name }, 
               }));
 
+             
+
               alert('Inicio de sesión exitoso. Redirigiendo al dashboard...');
-              window.location.href = "./dashboard.html"; 
+              window.location.href = "./iniciousuario.html"; 
           } else {
               alert(data.message || 'Error al iniciar sesión. Por favor, verifica tus credenciales.');
           }

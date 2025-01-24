@@ -16,7 +16,7 @@ main {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* User Info */
+
 #user-info {
     padding: 15px;
     border: 1px solid #ccc;
@@ -33,7 +33,7 @@ main {
     margin: 5px 0;
 }
 
-/* Share Post */
+
 #share-post {
     padding: 15px;
     border: 1px solid #ccc;
@@ -43,7 +43,7 @@ main {
 }
 
 #share-post textarea {
-    width: 100%;
+    width: 90%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -64,7 +64,7 @@ main {
     background-color: #0056b3;
 }
 
-/* Posts */
+
 #posts {
     padding: 15px;
     border: 1px solid #ccc;
@@ -87,3 +87,16 @@ main {
 .post small {
     color: #666;
 }
+
+#back-to-inicio {
+    padding: 7px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+  }
+ #back-to-inicio:hover {
+    background-color: #0056b3;
+  }

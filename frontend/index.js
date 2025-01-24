@@ -1,4 +1,3 @@
-
 document.getElementById("btn-login").addEventListener("click", () => {
     window.location.href = "./login.html";
 });
@@ -13,10 +12,14 @@ document.getElementById("btn-logout").addEventListener("click", () => {
     window.location.href = "./index.html";
 });
 
-/*Mensaje de bienvenida si el usuario ha iniciado sesión*/
-const user = JSON.parse(localStorage.getItem("user"));
-if (user) {
-    document.getElementById("welcome-message").textContent = `Hola, ${user.name}`;
-    document.getElementById("btn-logout").style.display = "block";
-}
 
+const userData = JSON.parse(localStorage.getItem("user"));
+
+if (userData) {
+    
+    console.log("User data: ", userData); 
+    document.getElementById("welcome-message").textContent = `Hola, ${userData.user?.name || "Invitado"}`;
+    document.getElementById("btn-logout").style.display = "block";
+} else {
+    console.log("No hay datos en localStorage");
+}
